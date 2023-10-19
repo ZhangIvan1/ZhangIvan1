@@ -10,10 +10,8 @@
   </div> <br>
   
   <!-- metrics 基础资料 -->
-  <picture>
-    <img src="/github-metrics.svg" alt="Metrics" width="100%" />
-  </picture>
-  <!-- <picture>
-    <img src="/github-metrics.svg" alt="metrics" width="50%" />
-  </picture> -->
 </div> 
+
+<picture>
+  <img src="/github-metrics.svg" alt="Metrics" width="100%" />
+</picture>
