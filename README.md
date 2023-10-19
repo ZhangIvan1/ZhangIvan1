@@ -11,6 +11,6 @@
   
   <!-- metrics 基础资料 -->
   <picture>
-    <img src="/github-metrics/github-metrics.svg" alt="metrics" width="100%" />
+    <img src="/github-metrics.svg" alt="metrics" width="100%" />
   </picture>
 </div> 
