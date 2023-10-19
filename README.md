@@ -10,9 +10,11 @@
 </div> <br>
 
 <!-- metrics 基础资料 -->
-<img width="150" src="https://cdn.jsdelivr.net/gh/ZhangIvan1/ZhangIvan1/assets/images/cxyduck.gif" />&emsp;
+<picture>
+<img src="https://cdn.jsdelivr.net/gh/ZhangIvan1/ZhangIvan1/assets/images/cxyduck.gif" />&emsp;
 <img src="https://cdn.jsdelivr.net/gh/ZhangIvan1/ZhangIvan1/github-metrics/base.svg" />
-&emsp;<img width="150" src="https://cdn.jsdelivr.net/gh/ZhangIvan1/ZhangIvan1/assets/images/cxyduck.gif" />
+<img src="https://cdn.jsdelivr.net/gh/ZhangIvan1/ZhangIvan1/assets/images/cxyduck.gif" />
+</picture><br>
 
 <!-- GitHub 数据统计 -->
 <img align="" height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=ZhangIvan1&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&line_height=21text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
