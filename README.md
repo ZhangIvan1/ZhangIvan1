@@ -11,9 +11,6 @@
   
   <!-- metrics 基础资料 -->
   <picture>
-    <img src="/github-metrics.svg" alt="metrics" width="100%" />
+    <img src="/github-metrics/github-metrics.svg" alt="metrics" width="100%" />
   </picture>
 </div> 
-<picture>
-  <img src="https://cdn.jsdelivr.net/gh/ZhangIvan1/ZhangIvan1/github-metrics/people.followers.svg" alt="people.followers" />
-</picture>
