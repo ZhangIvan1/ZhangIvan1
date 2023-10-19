@@ -20,4 +20,11 @@
   <img alt="github-snake" src="https://cdn.jsdelivr.net/gh/ZhangIvan1/ZhangIvan1/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
 </picture><br>
 
+<!-- GitHub Activity Graph GitHub 活动图 -->
+<table align="center">
+  <tr>
+    <td><img src="https://github-readme-activity-graph.vercel.app/graph?username=ZhangIvan1&theme=xcode&bg_color=FF000000&hide_border=true" alt="Activity"/></td>
+  </tr>
+</table>
+
 </div> 
