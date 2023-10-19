@@ -13,8 +13,7 @@
   <picture>
     <img src="/github-metrics.svg" alt="metrics" width="100%" />
   </picture>
-  
-  <picture>
-    <img src="https://cdn.jsdelivr.net/gh/ZhangIvan1/ZhangIvan1/github-metrics/people.followers.svg" alt="people.followers" />
-  </picture>
 </div> 
+<picture>
+  <img src="https://cdn.jsdelivr.net/gh/ZhangIvan1/ZhangIvan1/github-metrics/people.followers.svg" alt="people.followers" />
+</picture>
