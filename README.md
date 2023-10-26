@@ -25,7 +25,7 @@
 
 ## 2. Education Experience
 
-[<img style="padding-left: 0 !important;" align="right" height="128px" width="128px" alt="XDU" src="http://lsky.ivan-zhang.com.cn/i/2023/10/25/6537ee615e9d3.png"/>](https://www.xidian.edu.cn/)
+[<img style="padding-left: 0 !important;" align="right" height="128px" width="128px" alt="XDU" src="./images/xdu.png"/>](https://www.xidian.edu.cn/)
 
 **Graduate Student** 
 
@@ -37,7 +37,7 @@ Lab: Advanced Visual Research Lab.
 
 <br>
 
-[<img style="padding-left: 0 !important;" align="right" height="128px" width="128px" alt="NCU" src="http://lsky.ivan-zhang.com.cn/i/2023/10/25/6537ed5042e37.png"/>](https://www.ncu.edu.cn/)
+[<img style="padding-left: 0 !important;" align="right" height="128px" width="128px" alt="NCU" src="./images/ncu.png"/>](https://www.ncu.edu.cn/)
 
 **Bachelor Degree** 
 
