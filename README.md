@@ -16,7 +16,7 @@
 
 ## 1. Brief Introduction
 
-- 🔭 I’m currently a master student on [**XiDian University**](https://www.xidian.edu.cn/), majoring in Electronic Information.
+- 🔭 I’m currently a master student on [**XiDian University**](https://www.xidian.edu.cn/), majoring in Electronic Information (Network and Information Security).
 - 🌱My research interests include `Machine Learning, Federated Learning, Applied Cryptography`.
 
 ---
