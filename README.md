@@ -33,7 +33,7 @@
 
 Skills: `Machine Learning, Federated Learning, Applied Cryptography` etc.
 
-Lab: Advanced Visual Research Lab.
+Lab: Advanced Vision Research Institute.
 
 <br>
 
@@ -43,7 +43,7 @@ Lab: Advanced Visual Research Lab.
 
 [**NCU**](https://www.ncu.edu.cn/), Software School, Software Engineering • 2018/09/01 - 2022/07/01 
 
-Skills: `Object detection, Git, Pandaframe, Python, Kmeans, Dbscan, UDA` etc.
+Skills: `Git, Python` etc.
 
 Lab: Big Data Lab.
 
