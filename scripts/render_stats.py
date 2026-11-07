@@ -29,12 +29,13 @@ EXCLUDED_LANGUAGES = {"HTML", "CSS", "TeX", "Jupyter Notebook", "Makefile", "Doc
 EXCLUDED_REPOS = {"CS144Learn", "Raft_KV", "Algorithm_learning", "GolangLearning", "2021ZhuanYeKe_review"}
 TOP_LANGUAGES = 6
 
+# Counts include private activity. The token must be able to read the owner's private repositories
+# (classic PAT with repo and read:org scopes); a narrower token silently yields smaller numbers.
 PROFILE_QUERY = """
 query($login: String!) {
   user(login: $login) {
     createdAt
     pullRequests { totalCount }
-    issues { totalCount }
     repositoriesContributedTo(contributionTypes: [COMMIT, PULL_REQUEST, REPOSITORY]) { totalCount }
     contributionsCollection { contributionCalendar { totalContributions } }
     repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) {
@@ -50,10 +51,15 @@ query($login: String!) {
 }
 """
 
-COMMITS_QUERY = """
+# The contribution calendar total includes private contributions the token cannot open, because the
+# owner shares private contribution counts; commit totals only cover repositories the token can read.
+YEAR_QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
-    contributionsCollection(from: $from, to: $to) { totalCommitContributions }
+    contributionsCollection(from: $from, to: $to) {
+      totalCommitContributions
+      contributionCalendar { totalContributions }
+    }
   }
 }
 """
@@ -76,19 +82,17 @@ def fetch(token, login):
     user = graphql(token, PROFILE_QUERY, {"login": login})["user"]
     repos = user["repositories"]["nodes"]
 
-    # contributionsCollection spans at most one year, so sum commits year by year.
-    commits = 0
-    start = dt.datetime.fromisoformat(user["createdAt"].replace("Z", "+00:00"))
+    # contributionsCollection spans at most one year, so query calendar year by calendar year.
+    commits = contributions = 0
     now = dt.datetime.now(dt.timezone.utc)
-    while start < now:
-        end = min(start + dt.timedelta(days=365), now)
-        data = graphql(token, COMMITS_QUERY, {
+    for year in range(int(user["createdAt"][:4]), now.year + 1):
+        data = graphql(token, YEAR_QUERY, {
             "login": login,
-            "from": start.isoformat(),
-            "to": end.isoformat(),
-        })
-        commits += data["user"]["contributionsCollection"]["totalCommitContributions"]
-        start = end
+            "from": f"{year}-01-01T00:00:00Z",
+            "to": min(dt.datetime(year, 12, 31, 23, 59, 59, tzinfo=dt.timezone.utc), now).isoformat(),
+        })["user"]["contributionsCollection"]
+        commits += data["totalCommitContributions"]
+        contributions += data["contributionCalendar"]["totalContributions"]
 
     sizes, colors = {}, {}
     for repo in repos:
@@ -105,7 +109,7 @@ def fetch(token, login):
         "stars": sum(r["stargazerCount"] for r in repos),
         "commits": commits,
         "pull_requests": user["pullRequests"]["totalCount"],
-        "issues": user["issues"]["totalCount"],
+        "contributions": contributions,
         "contributed_to": user["repositoriesContributedTo"]["totalCount"],
         "contributions_last_year": user["contributionsCollection"]["contributionCalendar"]["totalContributions"],
         "languages": [{"name": n, "size": s, "color": colors[n]} for n, s in sizes.items()],
@@ -125,12 +129,12 @@ def card(theme, title, body):
 def render_overview(data, theme):
     t = THEMES[theme]
     items = [
-        ("Commits", data["commits"]),
-        ("Stars earned", data["stars"]),
-        ("Pull requests", data["pull_requests"]),
-        ("Issues", data["issues"]),
-        ("Contributed to", data["contributed_to"]),
+        ("Contributions", data["contributions"]),
         ("Contributions (1y)", data["contributions_last_year"]),
+        ("Commits", data["commits"]),
+        ("Pull requests", data["pull_requests"]),
+        ("Stars earned", data["stars"]),
+        ("Contributed to", data["contributed_to"]),
     ]
     cells = []
     for i, (label, value) in enumerate(items):
