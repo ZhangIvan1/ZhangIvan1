@@ -1,22 +1,8 @@
-<!-- profile logo 个人资料徽标 -->
-<!-- <div align="center">
-  <a href="https://zone.ivan-zhang.com.cn/"><img src="https://img.shields.io/badge/Website-博客-blue" /></a>&emsp;
-  <a href="https://www.researchgate.net/profile/Yifan-Zhang-253/"><img src="https://img.shields.io/badge/RG-ResearchGate-blue" /></a>&emsp; -->
-  <!-- visitor statistics logo 访问量统计徽标 -->
-<!--  <img src="https://komarev.com/ghpvc/?username=ZhangIvan1&label=Views&color=0e75b6&style=flat" alt="访问量统计" /><br>
-
-
-  <!-- metrics 基础资料 -->
-<!--  <picture>
-    <img src="/github-metrics.svg" alt="Metrics" width="80%" />
-  </picture>
-</div> -->
-
 # Hi,here！👋
 
 ## 1. Brief Introduction
 
-- 🔭 I’m currently a master student on [**XiDian University**](https://www.xidian.edu.cn/), majoring in Electronic Information (Network and Information Security).
+- 🎓 I received my master's degree from [**XiDian University**](https://www.xidian.edu.cn/) in 2025, majoring in Electronic Information (Network and Information Security).
 - 🌱My research interests include `Machine Learning, Federated Learning, Applied Cryptography`.
 
 ---
@@ -27,7 +13,7 @@
 
 [<img style="padding-left: 0 !important;" align="right" height="128px" width="128px" alt="XDU" src="./images/xdu.png"/>](https://www.xidian.edu.cn/)
 
-**Graduate Student** 
+**Master's Degree** 
 
 [**XDU**](https://www.xidian.edu.cn/), Hangzhou Institute of Technology, Electronic Information • 2022/09/01 - 2025/07/01  
 
@@ -53,7 +39,9 @@ Lab: Big Data Lab.
 
 ## 3. Github Stats
 
-<div style="display: flex; justify-content: center;";><img align="" height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=ZhangIvan1&show_icons=true" /><img align="" height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=ZhangIvan1&layout=compact" /></div>
+<div align="center">
+  <img src="./github-metrics.svg" alt="GitHub Metrics" width="80%" />
+</div>
 
 
 ---
@@ -147,4 +135,4 @@ Lab: Big Data Lab.
 | way  | website |
 | ---- | ------- |
 |      |         |
---!>
+-->
